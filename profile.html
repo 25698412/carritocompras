@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil - GreenLight</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GreenLight</h1>
+      <nav>
+        <a href="index.html" id="homeLink"><i class="fas fa-home"></i> Inicio</a>
+        <a href="profile.html" id="profileLink"><i class="fas fa-user"></i> Mi Perfil</a>
+        <a href="index.html" id="logoutLink"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+      </nav>
+    </header>
+
+    <main class="profile-container">
+      <h2>Mi Perfil</h2>
+      <div class="profile-info">
+        <div class="profile-section profile-picture-section">
+          <div class="profile-picture-container">
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil" id="profilePicture">
+            <div class="picture-actions">
+              <button onclick="document.getElementById('pictureInput').click()" class="btn-change-picture">
+                <i class="fas fa-camera"></i> Cambiar foto
+              </button>
+              <input type="file" id="pictureInput" accept="image/*" style="display: none;">
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h3>Información Personal</h3>
+          <p><strong>Nombre:</strong> <span id="profileName"></span></p>
+          <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          <button class="btn-edit" onclick="toggleEditForm()">
+            <i class="fas fa-edit"></i> Editar información
+          </button>
+          
+          <div id="editForm" class="edit-form" style="display: none;">
+            <h4>Editar Perfil</h4>
+            <form id="profileEditForm">
+              <div class="form-group">
+                <label for="editName">Nombre:</label>
+                <input type="text" id="editName" required>
+              </div>
+              <div class="form-group">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" required>
+              </div>
+              <button type="submit" class="btn-save">Guardar cambios</button>
+              <button type="button" class="btn-cancel" onclick="toggleEditForm()">Cancelar</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h3>Seguridad</h3>
+          <button class="btn-change-password" onclick="togglePasswordForm()">
+            <i class="fas fa-lock"></i> Cambiar contraseña
+          </button>
+          
+          <div id="passwordForm" class="password-form" style="display: none;">
+            <h4>Cambiar Contraseña</h4>
+            <form id="passwordChangeForm">
+              <div class="form-group">
+                <label for="currentPassword">Contraseña actual:</label>
+                <input type="password" id="currentPassword" required>
+              </div>
+              <div class="form-group">
+                <label for="newPassword">Nueva contraseña:</label>
+                <input type="password" id="newPassword" required>
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirmar nueva contraseña:</label>
+                <input type="password" id="confirmPassword" required>
+              </div>
+              <button type="submit" class="btn-save">Cambiar contraseña</button>
+              <button type="button" class="btn-cancel" onclick="togglePasswordForm()">Cancelar</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="profile-section">
+          <h3>Mis Pedidos</h3>
+          <div id="ordersList" class="orders-list">
+            <!-- Los pedidos se cargarán dinámicamente aquí -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>GreenLight &copy; 2023 - Club Cannábico</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

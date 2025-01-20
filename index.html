@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLight - Iluminación para Cultivo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GreenLight</h1>
+      <nav>
+        <a href="login.html" id="loginLink"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+        <a href="profile.html" id="profileLink" style="display: none;"><i class="fas fa-user"></i> Mi Perfil</a>
+        <a href="admin.html" id="adminLink" style="display: none;"><i class="fas fa-cog"></i> Panel Admin</a>
+      </nav>
+    </header>
+
+    <div class="hero-banner">
+      <div class="hero-content">
+        <h2>Iluminación Profesional para Cultivo</h2>
+        <p>Maximiza tu producción con nuestra tecnología LED de última generación</p>
+      </div>
+    </div>
+
+    <main>
+      <section class="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-list">
+          <div class="product-card">
+      <img src="images/led-grow-300w.jpg" alt="Led Grow 300W" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">Led Grow 300W Full Spectrum</h3>
+              <p class="product-description">Ideal para espacios de 1m², con control de intensidad</p>
+              <p class="product-price">$299.99</p>
+              <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+          </div>
+          
+          <div class="product-card">
+      <img src="images/led-grow-600w.jpg" alt="Led Grow 600W" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">Led Grow 600W Full Spectrum</h3>
+              <p class="product-description">Para espacios de 2m², con temporizador integrado</p>
+              <p class="product-price">$499.99</p>
+              <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="cart">
+        <h2>Tu Carrito</h2>
+        <div class="cart-items">
+          <div class="cart-item">
+            <span>Led Grow 300W</span>
+            <span>$299.99</span>
+          </div>
+        </div>
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="total">$299.99</span>
+        </div>
+        <button id="checkout-btn">Finalizar Compra</button>
+      </aside>
+    </main>
+
+    <footer>
+      <p>GreenLight &copy; 2023 - Club Cannábico</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
